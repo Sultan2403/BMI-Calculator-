@@ -18,7 +18,7 @@ button.addEventListener("click", function () {
     // BMI Category
 
     if (clientName === "" || clientHeight === "" || isNaN(clientHeight) || isNaN(clientWeight) || clientHeight <= 0 || clientWeight <= 0) {
-        result.innerHTML = "⚠️ Please enter a valid name and/or height.";
+        result.innerHTML = "⚠️ Please enter a valid name, weight and/or height.";
         return;
     }
 
