@@ -4,11 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator </title>
+    <title>BMI Calculator 🧮</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-
+    <h1>BMI Category Calculator</h1>
+    <form action="#">
+        <div>
+            <label for="name">Enter your name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="weight">Enter your weight in kg</label>
+            <input type="number" min="1" name="weight" id="weight">
+        </div>
+        <div>
+            <label for="height">Enter your height(m)</label>
+            <input type="number" name="height" min="0" id="height">
+        </div>
+        <button id="btn" type="button">Check BMI Category!</button>
+        <p id="result"></p>
+    </form>
+    <script src="./app.js"></script>
 </body>
 
 </html>
