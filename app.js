@@ -1,19 +1,19 @@
-const button = document.getElementById("btn")
-const result = document.getElementById("result")
+const button = document.getElementById("btn");
+const result = document.getElementById("result");
 
 button.addEventListener("click", function () {
     // Variables for calculations
 
-    const clientName = document.getElementById("name").value
-    const clientWeight = parseFloat(document.getElementById("weight").value)
-    const clientHeight = parseFloat(document.getElementById("height").value)
-    let isHighRisk
-    let BMI_Category
-    let Health_Advice
+    const clientName = document.getElementById("name").value;
+    const clientWeight = parseFloat(document.getElementById("weight").value);
+    const clientHeight = parseFloat(document.getElementById("height").value);
+    let isHighRisk;
+    let BMI_Category;
+    let Health_Advice;
 
     // Logic and shii
 
-    const BMI = (clientWeight) / (clientHeight * clientHeight)
+    const BMI = (clientWeight) / (clientHeight * clientHeight);
 
     // BMI Category
 
@@ -23,37 +23,37 @@ button.addEventListener("click", function () {
     }
 
     else if (BMI < 18.5) {
-        BMI_Category = "Under Weight"
+        BMI_Category = "Under Weight";
     }
 
     else if (BMI >= 18.5 && BMI < 25) {
-        BMI_Category = "Normal Weight"
+        BMI_Category = "Normal Weight";
     }
 
     else if (BMI >= 25) {
-        BMI_Category = "Over Weight"
+        BMI_Category = "Over Weight";
     }
 
     // High Health Risk Section
 
     if (BMI_Category === "Over Weight" || clientWeight > 90) {
-        isHighRisk = "Yes"
+        isHighRisk = "Yes";
     }
 
     else {
-        isHighRisk = "No"
+        isHighRisk = "No";
     }
 
     if (isHighRisk === "Yes") {
-        Health_Advice = `⚠️ You are ${BMI_Category} and need to lose some weight. Consider heading to the gym! :)`
+        Health_Advice = `⚠️ You are ${BMI_Category} and need to lose some weight. Consider heading to the gym! :)`;
     }
 
     else if (isHighRisk === "No" && BMI_Category === "Normal Weight") {
-        Health_Advice = "✅ You are really healthy. Keep up your current lifestyle! :)"
+        Health_Advice = "✅ You are really healthy. Keep up your current lifestyle! :)";
     }
 
     else if (BMI_Category === "Under Weight") {
-        Health_Advice = `⚠️ You are under weight and need to lose some weight`
+        Health_Advice = `⚠️ You are under weight and need to lose some weight`;
     }
 
     result.innerHTML = `Name: <strong>${clientName}</strong> <br/> 
@@ -66,15 +66,15 @@ button.addEventListener("click", function () {
     let BMI_Color = document.getElementById("BMI-Category-Color")
 
     if (BMI_Category === "Under Weight") {
-        BMI_Color.style.color = "orange"
+        BMI_Color.style.color = "orange";
     }
 
     else if (BMI_Category === "Normal Weight") {
-        BMI_Color.style.color = "green"
+        BMI_Color.style.color = "green";
     }
 
     else if (BMI_Category === "Over Weight") {
-        BMI_Color.style.color = "red"
+        BMI_Color.style.color = "red";
     }
 
 })
