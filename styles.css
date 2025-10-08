@@ -1,15 +1,11 @@
 body {
   font-family: "Montserrat", sans-serif;
   justify-items: center;
+  background-color: rgb(99, 99, 168);
 }
 
 form {
-  background: #122aa3;
-  background: radial-gradient(
-    circle,
-    rgba(18, 42, 163, 1) 65%,
-    rgba(252, 70, 107, 1) 86%
-  );
+  background: #1c2347;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,4 +35,12 @@ button {
   font-size: 18px;
   background-color: rgb(26, 122, 151);
   color: white;
+}
+
+#BMI-Category-Color {
+  font-weight: bold;
+}
+
+p {
+  font-weight: 500;
 }
